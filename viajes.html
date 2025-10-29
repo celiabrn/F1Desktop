@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <title>F1 Desktop-Viajes</title>
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Celia Bobo Rodríguez-Noriega" />
+    <meta name ="description" content ="Página con información de viajes" />
+    <meta name ="keywords" content ="viajes, mapa" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href ="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href ="estilo/layout.css" />
+    <link rel="icon" href="multimedia/imagenes/favicon.png"/>
+    <script src="js/viajes.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Datos con el contenidos que aparece en el navegador -->
+        <h1><a href="index.html">F1 Desktop</a></h1>
+    
+        <!-- Menú de la página web -->
+        <nav>
+            <a href="index.html" title="Enlace a la página de inicio">Inicio</a>
+            <a href="piloto.html" title="Enlace a la página del piloto">Piloto</a>
+            <a href="noticias.html" title="Enlace a la página de noticias">Noticias</a>
+            <a href="calendario.html" title="Enlace a la página del calendario">Calendario</a>
+            <a href="meteorología.html" title="Enlace a la página de meteorología">Meteorología</a>
+            <a href="circuito.html" title="Enlace a la página del circuito">Circuito</a>
+            <a href="viajes.php" title="Enlace a la página de viajes">Viajes</a>
+            <a href="juegos.html" title="Enlace a la página de juegos">Juegos</a>
+        </nav>
+    </header>
+
+    <p>Estás en: <a href= "index.html">Inicio</a> >> Viajes</p>
+    
+    <main>
+    <h2>Viajes</h2>
+    <script>
+        var v = new Viajes()
+    </script>
+    <section>
+        <h3>Mapa estático</h3>
+        <button onclick="v.getMapaEstaticoGoogle()">Mostrar mapa estático</button>
+    </section>
+    <section>
+        <h3>Mapa dinámico</h3>
+        <div></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=v.getMapaDinamicoGoogle"></script>
+    </section>
+    </main>
+</body>
+</html>

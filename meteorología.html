@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <title>F1 Desktop-Meteorología</title>
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Celia Bobo Rodríguez-Noriega" />
+    <meta name ="description" content ="Página con información acerca de la meteorología" />
+    <meta name ="keywords" content ="meteorología, tiempo, austria, viena, red bull ring" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href ="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href ="estilo/layout.css" />
+    <link rel="stylesheet" type="text/css" href ="estilo/article_elements.css" />
+    <link rel="icon" href="multimedia/imagenes/favicon.png"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/pais.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- Datos con el contenidos que aparece en el navegador -->
+        <h1><a href="index.html">F1 Desktop</a></h1>
+    
+        <!-- Menú de la página web -->
+        <nav>
+            <a href="index.html" title="Enlace a la página de inicio">Inicio</a>
+            <a href="piloto.html" title="Enlace a la página del piloto">Piloto</a>
+            <a href="noticias.html" title="Enlace a la página de noticias">Noticias</a>
+            <a href="calendario.html" title="Enlace a la página dlñ calendario">Calendario</a>
+            <a href="meteorología.html" title="Enlace a la página de meteorología">Meteorología</a>
+            <a href="circuito.html" title="Enlace a la página del circuito">Circuito</a>
+            <a href="viajes.php" title="Enlace a la página de viajes">Viajes</a>
+            <a href="juegos.html" title="Enlace a la página de juegos">Juegos</a>
+        </nav>
+    </header>
+
+    <p>Estás en: <a href= "index.html">Inicio</a> >> Meteorología</p>
+    
+    <main>
+        <section>
+            <h2>Meteorología</h2>
+            <script>
+                var pais = new Pais("Austria", "Viena",  9158750);
+                pais.inicializarAtributos();
+                document.write("<p>País: ");
+                document.write(pais.getNombre());
+                document.write("</p>");
+    
+                document.write("<p>Capital: ");
+                document.write(pais.getCapital());
+                document.write("</p>");
+    
+                pais.escribirCoordenadas();
+                
+                document.write("<p>Otros datos: ");
+                document.write(pais.getInfo());
+    
+                pais.verInfoMeteorológica()
+                </script>
+        </section>        
+    </main>
+</body>
+</html>

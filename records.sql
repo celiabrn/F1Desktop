@@ -1,0 +1,1 @@
+CREATE TABLE records . registro (Nombre VARCHAR(20) NOT NULL , Apellidos VARCHAR(40) NOT NULL , Dificultad FLOAT NOT NULL , Tiempo FLOAT NOT NULL ) ENGINE = InnoDB;
