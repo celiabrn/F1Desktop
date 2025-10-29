@@ -1,0 +1,246 @@
+/* Celia Bobo Rodríguez-Noriega UO222898 */
+/*Especificidad: 001*/
+body {
+    font-family: "Century Gothic", sans-serif;
+    background-color:#b1d4e0;
+    color: #0c2d48; 
+    margin: 1em 1em;
+}
+/*Especificidad: 001
+Hereda de body color: #0c2d48*/
+header{
+    background-color:#186072;
+    border-radius: 1em;
+    padding: 1.3em;
+}
+/*Especificidad: 002
+Hereda de header background-color:#186072*/
+h1 a{
+    color:#fff;
+    text-decoration-line: none;
+}
+
+/*Especificidad: 001
+*/
+h1{
+    margin-left: 0.5em;
+}
+
+/*Especificidad: 002
+Hereda de header background-color:#186072*/
+nav a {
+    color:#fff;
+    text-decoration-line: none ;
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+
+/*Especificidad 012
+Hereda de header background-color:#186072*/
+nav a:active{
+    font-size:1.25em;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    color:#A4C3FC;
+}
+
+/*Especificidad : 001*/
+h3 {
+    text-decoration-line: underline;
+    text-decoration-style: dashed   ;
+    text-underline-position: under;
+}
+
+/*Especificidad : 001*/
+h2{
+    border-bottom: #172E2E solid ;
+}
+
+/*Especificidad 012*/
+body > p:first-of-type{
+    font-size: 0.8em;
+}
+
+/*Especificidad 002
+Hereda de body background-color:#b1d4e0*/
+p a {
+    color: #0c2d48; 
+    margin: 0.4em;
+}
+
+/*Especificidad 012
+Hereda de p a color: #0c2d48*/
+p a:hover{
+    background: #AFFDDB;
+    text-decoration-line: none;
+}
+
+/*Especificidad 002*/
+ul > li { 
+    list-style-type: "➤"; 
+    font-weight: bold;
+}
+
+/*Especificidad 005*/
+section ul li ul li { 
+    list-style-type: "★"; 
+    font-weight: normal;
+}
+
+/*Especificidad 007*/
+section ul li ul li ul li { 
+    list-style-type: circle; 
+}
+
+
+/*Especificidad 002*/
+dl dt{
+    color: #fff;
+    font-weight: bold;
+    background-color:#1c1a4f ;
+}
+
+/*Especificidad 001
+Hereda de body background-color:#b1d4e0*/
+table{
+    table-layout: fixed;
+    width: 60%;
+    border: 0.5em ridge#894030;
+    color: #141414;
+}
+
+/*Especificidad 001*/
+th {
+    width:40%;
+    padding: 0.2em;
+}
+
+/*Especificidad 001*/
+td{
+    text-align: center;
+    overflow: hidden;
+}
+
+/*Especificidad 001*/
+tr{
+    color:#fff;
+}
+
+/*Especificidad 011
+Hereda de table color: #141414*/
+tr:nth-child(odd) {
+    background-color: #0e0c40;
+}
+
+/*Especificidad 011
+Hereda de table color: #141414*/  
+tr:nth-child(even) {
+    background-color: #1b0d33;
+}
+
+/*Especificidad 002
+Hereda de body background-color:#b1d4e0*/
+table caption {
+    padding: 1em;
+    font-weight: bold;
+    font-style: italic;
+    color: #494253;
+    text-align: center;
+}
+
+/*Especificidad 001*/
+video {
+    width:70%;
+    height:auto;
+}
+
+/*Especificidad 001*/
+audio{
+    width:20vw;
+    height:5vw;
+}
+
+/*Especificidad 012*/
+section:nth-of-type(2) > div {
+    width:60%; 
+    height:50vw; 
+}
+
+/*Especificidad 022*/
+main > article:nth-child(5):nth-of-type(1) {
+    width: 100%;
+    max-width: 100vh;
+    height: 70vh;
+    position: relative;
+    overflow: hidden; 
+}
+
+/*Especificidad 023*/
+main > article:nth-child(5):nth-of-type(1) img {
+    width: 100%;
+    max-width: 100vh;
+    height: 60vh;
+    position: absolute;
+    transition: all 0.5s;
+    object-fit: cover;
+    border-radius: 0.3em;
+}
+
+/*Especificidad 023*/
+main > article:nth-child(5):nth-of-type(1) button {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 1em;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+/*Especificidad 033*/
+main > article:nth-child(5):nth-of-type(1) button:active {
+    transform: scale(1.1);
+}
+
+/*Especificidad 033*/
+main > article:nth-child(5):nth-of-type(1) button:nth-of-type(2) {
+    top: 50%;
+    left: 2%;
+}
+
+/*Especificidad 033*/
+main > article:nth-child(5):nth-of-type(1) button:nth-of-type(1) {
+    top: 50%;
+    right: 2%;
+}
+
+/*Media Query*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+     /*Especificidad 012*/
+    body > p:first-of-type {
+      display: none;
+    }
+
+    /*Especificidad 001
+    Hereda de body background-color:#b1d4e0*/
+    table{
+        width: 100%;
+    }
+
+    /*Especificidad 001*/
+    video {
+        width:100%;
+    }
+
+    /*Especificidad 001*/
+    audio{
+        width:70vw;
+        height:20vw;
+    }
+}
